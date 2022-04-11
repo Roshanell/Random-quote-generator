@@ -1,0 +1,110 @@
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body{
+    background-image:linear-gradient(#6565e7,	#5288E8 );
+    background-repeat: no-repeat;
+     font-size: 2em;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+ .quotes {
+     /* height: 200px;
+     position: relative; */
+     text-align: center;
+     margin: auto;
+ }
+ 
+ #quoteGen {
+     height: 70px;
+     width: 200px;
+     position: center;
+     border-radius: 12px;
+     font-size: .5em;
+     background-color:rgb(217, 211, 241);
+ }
+ #quoteGen:hover {
+     background-color: rgb(175, 180, 240)
+ }
+
+
+/* ************************************************ */
+/* Quotation Marks */
+
+
+blockquote {
+    font-family: Georgia, serif;
+    position: relative;
+    margin: 0.5em;
+    padding: 0.5em 2em 0.5em 3em;
+}
+blockquote:before {
+    font-family: Georgia, serif;
+    position: absolute;
+    font-size: 6em;
+    line-height: 1;
+    top: 0;
+    left: 0;
+    content: "\201C";
+}
+blockquote:after {
+    font-family: Georgia, serif;
+    position: absolute;
+   /* display: block; don't use this, it raised the quote too high from the bottom - defeated line-height? */
+    float:right;
+    font-size:6em;
+    line-height: 1;
+    right:0;
+    bottom:-0.5em;
+    content: "\201D";
+}
+blockquote footer {
+    padding: 0 2em 0 0;
+    text-align:right;
+}
+blockquote cite:before {
+    content: "\2013";
+}
+/* **************************************************** */
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+.box {
+    border-radius: 17px;
+    background-color: white;
+    height: 70vh;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 10px;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
